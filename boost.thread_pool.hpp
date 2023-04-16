@@ -40,8 +40,8 @@ public:
 	}
 	
 	void run () {
-		int a , int b; 
-		auto callback = []() { return true; }
+		int a ; int b; 
+		auto callback = []() { return true; };
 		boost::asio::post(
 			*m_thread_pool, RvalueBind(std::move(test), std::move(a), std::move(b), std::move(callback))
 		);
@@ -51,3 +51,4 @@ public:
 
 
 #endif
+
